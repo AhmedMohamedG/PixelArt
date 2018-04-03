@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+<!-- Calling style and font files -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="css/styles.css">
+<!-- Calling JavaScript files -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript"  src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+<body>
+    <div id="container">
+<!-- Here are the modifiers for the canvas size -->
+        <div id="canvasModifiers">
+            <h1>Pixel Art Maker</h1>
+            <h2>Choose Grid Size</h2>
+            <form id="sizePicker">
+                <p>Grid Height:</p>
+                <input type="number" id="input_height" name="height" min="1" max="100" value="1">
+                <p>Grid Width:</p>
+                <input type="number" id="input_width" name="width" min="1" max="100" value="1">
+                <p>Cell Size:</p>
+                <input type="number" id="cell_size" name="cellWidth" min="5" max="20" value="20">
+                <input type="submit" id="submit_button" value="BeGiN!!">
+                
+                           
+            </form>
+        </div>
+<!-- Color modifier -->
+        <div id="colorDiv">
+            <h2>Pick A Color</h2>
+            <input type="color" id="colorPicker">
+         </div>
+         <div id="canvasArea">
+<!-- Buttons area  -- canvas title -->           
+            <div id="upperBanner">
+                <button type="button" id="resizeCanvasButton" class="icon-collapse"> Show selectors</button>
+                <button type="button" id="bordercontroler">hide borders!</button>
+                <button type="button" id="randomness" >randomfill!!</button>
+                <button type="button" id="clearAll" >  clear!! </button>
+                <button type="button" id="InstructionsButton" > Hide Instructions</button> 
+                <h2 id="canvas_title">Design Canvas</h2>
+            </div>
+<!-- Actual Drawing area -->
+            <div id="drawArea">
+                <table id="table_pixles" >
+                    <tbody id="pixel_canvas"></tbody>
+                </table>
+            </div>
+        </div>
+<!-- Footer for instructions and Credit -->
+        <footer>        
+             <div id="footer">
+                 <div id="InstructionsDiv" >
+                      <h2 id="footer_Title"> Instructions</h2> 
+                      <ul id="InstructionsList">
+                           <li>Choose your canvas height, width and cell size.</li>
+                           <li>pick a color, you can change it later.</li>
+                           <li>draw by a single click or drag your mouse while clicking. </li>
+                           <li>erase one cell by double click on it or use erase button to erase all cells. </li>
+                           <li>use random fill to fill empty cells with random colors and reclick to stop. </li>
+                           <li><em><span> Caution:</span> Do not under any circumstances use random fill and hide borders together, you will probably get dizzy or worse. </em></li>
+                       </ul>
+                       <p>Enjoy !!</p>
+                       <div id="credit">
+                             <p> Credit: </p>
+                             <p class="fa-at"> Ahmed Mohamed Gaber, Google Developer Challenge, Udacity.</p>
+                             <p><a href="mailto:ahmed.mohamed.gaber@gmail.com?subject=Pixel Art Maker Project"><i class="fas fa-at"></i></a> <a href="https://www.linkedin.com/in/ahmedmohamedgaber/" target="_blank"><i class="fab fa-linkedin-in"></i></a></p>
+                      </div>
+                  </div>
+            </div>
+      </footer>
+    </div>
+<!-- Calling own JS file -->
+<script type="text/javascript"  src="js/designs.js"></script>
+</body>
+</html>
